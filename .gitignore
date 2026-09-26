@@ -7,3 +7,7 @@ venv/
 # 検証スクリプトの出力
 poc/captures/
 poc/voice_notes/
+
+# 実行時データ(設計 §4.1)
+sessions/
+export/
