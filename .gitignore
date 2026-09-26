@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 検証スクリプトの出力
+poc/captures/
+poc/voice_notes/
