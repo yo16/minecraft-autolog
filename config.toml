@@ -1,0 +1,33 @@
+# minecraft-autolog の設定。書いていない項目は autolog/config.py の既定値になる(設計 §4.4)
+
+data_dir = "%LOCALAPPDATA%/minecraft-autolog"
+minecraft_dir = "%APPDATA%/.minecraft"
+minecraft_log_dir = "D:/Public/github/yo16/minecraft-log"   # import_state.json から現在のシーズン名を読む
+season = ""              # 空なら minecraft-log の current_season、それもなければワールド名
+
+[capture]
+interval_s = 5
+format = "webp"
+quality = 80
+static_threshold = 0.01
+keep = "all"             # all | near_events(メモ・F2・進捗から離れたフレームはセッション終了時に削除。M3 で実装)
+near_events_window_s = 120
+
+[voice]                  # M2 で使う
+enabled = true
+mode = "toggle"          # toggle | hold | vad
+key = "right_ctrl"       # right_ctrl | right_shift | scroll_lock | pause | f13.. | mouse_x1 | mouse_x2
+device = ""              # 空なら既定のマイク。名前の一部でも可
+model = "large-v3-turbo"
+threads = 8
+beam = 2
+glossary = "glossary.txt"
+vad_db = -38
+vad_silence_s = 1.2
+max_seconds = 90
+
+[export]                 # M3 で使う
+frames_per_note = 1
+long_note_s = 15
+include_advancements = true
+include_deaths = true

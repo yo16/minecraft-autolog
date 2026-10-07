@@ -1,0 +1,7 @@
+# numpy と opencv-python は windows-capture の依存として入る
+pywin32>=306
+windows-capture>=2.0.1
+# voice(M2)用
+sounddevice>=0.5
+pynput>=1.7
+faster-whisper>=1.1
